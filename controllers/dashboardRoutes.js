@@ -22,7 +22,7 @@ router.get("/", withAuth, async (req, res) => {
       //--------------------------------------------//
       Game.findAll({
         where: {
-          user_id: 1,
+          user_id: req.session.userId,
         },
       }).then((gameData) => {
         const games = gameData.map((game) => game.get({ plain: true }));

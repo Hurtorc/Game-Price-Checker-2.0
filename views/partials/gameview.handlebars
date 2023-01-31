@@ -1,18 +1,12 @@
 <div class="row p-5 justify-content-center">
-  <div class="col-10 p-4">
-    <ul class="d-flex flex-wrap"></ul>
-    <div class="container text-center">
-      <div class="row">
-        <div class="azure"> Name: {{name}} </div>
-        <div class="azure"> Price: {{price}} </div>
-        <div class="azure"> Platform: {{platform}} </div>
-        <div class="azure">
-          <canvas id="myChart"></canvas>
+          <div class="col-10 p-4">
+            <ul class ="d-flex flex-wrap"></ul>
+              <div class="container text-center">
+                <div class="row">
+                <div> Name: {{games.name}} </div>
+                <div> Price: {{games.price}} </div>
+                <div> Platform: {{`$get_platform_name(games.platform)`}} </div>
+                </div>
+              </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script type="text/javascript" src="/js/chart.js"></script>

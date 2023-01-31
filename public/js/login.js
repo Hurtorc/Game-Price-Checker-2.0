@@ -6,6 +6,12 @@ const loginFormHandler = async function(event) {
   const usernameEl = document.querySelector('#username-input-login');
   const passwordEl = document.querySelector('#password-input-login');
 
+  window.localStorage.getItem('username'). valueOf = usernameEl.value;
+  window.localStorage.getItem('password'). valueOf = passwordEl.value;
+
+  window.localStorage.clear();
+
+  
   const response = await fetch('/api/user/login', {
     method: 'POST',
     body: JSON.stringify({

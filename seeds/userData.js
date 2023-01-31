@@ -4,8 +4,8 @@ const userData = [
   {
     id: 1,
     username: "test",
-    password: "test",
-    email: "test@test.com",
+    // password: "1234",
+    password: "$2b$10$qUkQQjfRBbt6B8wfRhwAkOD8kzVLXQx7ZCoqNKY8cvv6sHL5JlIzq",
   },
 ];
 

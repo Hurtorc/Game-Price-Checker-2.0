@@ -7,25 +7,36 @@ const gameAdd = async function (event) {
   const gameplatformEl = document.querySelector("#game-platform-input");
   const gameurlEl = document.querySelector("#game-url-input");
 
-  let userid = req.session.user_id;
+  // const response = await fetch("/api/gameData", {
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     name: gamenameEl.value,
+  //     price: gamepriceEl.value,
+  //     platform: gameplatformEl.value,
+  //     url: gameurlEl.value,
+  //   }),
+  //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  // });
 
   const response = await fetch("/api/gameData", {
     method: "POST",
-    body: JSON.stringify({
+    body: FormData({
       name: gamenameEl.value,
       price: gamepriceEl.value,
       platform: gameplatformEl.value,
       url: gameurlEl.value,
-      user_id: userid,
     }),
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
   });
-
+  console.log(response);
   if (response.ok) {
     console.log("Game added");
+    //document.location.replace("/dashboard");    
   } else {
     console.error("Failed to add game: Response code ", response.status);
   }
 };
 
-document.querySelector("#game-add-form").addEventListener("submit", gameAdd);
+document
+.querySelector("#game-add-form")
+.addEventListener("submit", gameAdd);

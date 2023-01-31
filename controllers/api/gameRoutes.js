@@ -35,9 +35,8 @@ router.post("/", async (req, res) => {
       name: req.body.name,
       price: req.body.price,
       url: req.body.url,
-      user_id: req.session.userId,
+      user_id: req.session.userId || req.body.user_id,
       platform: req.body.platform,
-      post_date: req.body.post_date,
     });
     res.status(200).json(gameData);
   } catch (err) {

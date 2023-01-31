@@ -37,7 +37,7 @@ Game.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       unique: false,
       references: {
         model: "user",
