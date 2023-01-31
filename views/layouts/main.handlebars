@@ -34,19 +34,19 @@
 
     <main>
     {{{body}}}
-    </main>
-    <section class="text-center text-white">
+  </main>
+    <section class="text-center text-white navbar">
         <div class="text-center p-3 text-white fixed-bottom" style="background-color: rgba(0, 0, 0, 0.2);">Created by
-          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/Hurtorc" target="_blank" role="button"><i class="fab fa-github"></i></a> Adam Latham 
-          <a class="btn btn-outline-info btn-floating m-1" id="yellow-btn" href="https://github.com/galeg008" target="_blank" role="button"><i class="fab fa-github"></i></a> Giovanni Galeana 
-          <a class="btn btn-outline-info btn-floating m-1" id="green-btn" href="https://github.com/NathanPhan96" target="_blank" role="button"><i class="fab fa-github"></i></a> Nathan Phan 
-          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/Chitosama" target="_blank" role="button"><i class="fab fa-github"></i></a> Jose Cuervo 
-          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/devNathanNguyen" target="_blank" role="button"><i class="fab fa-github"></i></a> Nathan Nguyen 
-          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/AViramontes" target="_blank" role="button"><i class="fab fa-github"></i></a> April Viramontes
+          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/Hurtorc" target="_blank" role="button"></a> Adam Latham 
+          <a class="btn btn-outline-info btn-floating m-1" id="yellow-btn" href="https://github.com/galeg008" target="_blank" role="button"></a> Giovanni Galeana 
+          <a class="btn btn-outline-info btn-floating m-1" id="green-btn" href="https://github.com/NathanPhan96" target="_blank" role="button"></a> Nathan Phan 
+          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/Chitosama" target="_blank" role="button"></a> Jose Cuervo 
+          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/devNathanNguyen" target="_blank" role="button"></a> Nathan Nguyen 
+          <a class="btn btn-outline-info btn-floating m-1" id="red-btn" href="https://github.com/AViramontes" target="_blank" role="button"></a> April Viramontes
         <!-- Copyright -->
-      </section>
+      </section>  
   </body>
-</html>
+
 {{! inline script to handle click of logout button }}
 <script>
   const logout = async function() { const response = await
@@ -55,3 +55,4 @@
   else { alert('Failed to log out'); } };
   document.querySelector('#logout-link').addEventListener('click', logout);
 </script>
+</html>

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Game } = require("../../models");
+const { Game, history_price } = require("../../models");
 const dbConnection = require("../../config/index");
 const sequelize = require("sequelize");
 const withAuth = require("../../utils/auth");
@@ -42,6 +42,20 @@ router.post("/", async (req, res) => {
     res.status(200).json(gameData);
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+router.get("/price-history/:game", async (req, res) => {
+  const gamePrices = await history_price.findOne({
+    where: {
+      game_id: req.params.game,
+    },
+  });
+  console.log(gamePrices);
+  if (gamePrices) {
+    res.json(gamePrices);
+  } else {
+    return false;
   }
 });
 
