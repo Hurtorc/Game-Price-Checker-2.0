@@ -1,5 +1,11 @@
-body {
+body{
     background: white ;
     height: 50% ;
     width: 50% ; 
+}
+.chart-box {
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(54, 162, 235, 1);
+    background: white;
 }

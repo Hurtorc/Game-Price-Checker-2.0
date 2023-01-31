@@ -8,34 +8,14 @@
     <title>History Of Game Price Chart</title>
 </head>
 
-<body class="tiny">
+<body>
     <h1>History Of Game Price Chart</h1>
+    <div class="chart-box">
+        <canvas id="myChart"></canvas>
+    </div>
 
-    <canvas id="myChart"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            datasets: [{
-              label: 'History Of Game Price',
-              data: [12, 19, 3, 5, 2, 3, 18, 9, 15, 9, 1, 30],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      </script>
-      
+
 </body>
 </html>
